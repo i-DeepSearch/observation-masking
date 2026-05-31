@@ -1,11 +1,13 @@
 #!/bin/bash
 # Quick start script for running agent with multiple vLLM servers
-# Usage: ./run_agent.sh [output_dir] [base_port] [num_servers] [dataset_name] [browser_backend] [model_path] [archive_turns] [external_url] [parallel_tool_calls]
+# Usage: ./run_agent.sh [output_dir] [base_port] [num_servers] [dataset_name] [browser_backend] [model_path] [archive_turns] [external_url] [parallel_tool_calls] [max_concurrency_per_worker]
 #
 # external_url (arg 8): if set, skip local port building and use this URL directly.
 #   Single URL:  https://your-ngrok.ngrok-free.dev/v1
 #   Multi URL:   http://host1/v1,http://host2/v1
 #   When using external_url, num_servers is ignored (worker count = number of comma-separated URLs).
+# max_concurrency_per_worker (arg 10): recommended values:
+#   DeepSeek-V4-Flash (dsv4) and GPT-OSS-120B: 8; GPT-OSS-20B: 24; other models: 32.
 
 OUTPUT_DIR=${1:-"results/browsecomp-plus/qwen3.5-9b-bm25-auto"}
 BASE_PORT=${2:-8010}
@@ -20,6 +22,8 @@ ARCHIVE_TURNS=${7:-"4"}
 EXTERNAL_URL=${8:-""}
 # Parallel tool calls: "off" disables model-specific multi-tool-call prompting and concurrent browser.search execution.
 PARALLEL_TOOL_CALLS=${9:-"on"}
+# Maximum concurrent agent tasks sent to each model worker.
+MAX_CONCURRENCY_PER_WORKER=${10:-32}
 
 # Search service URL for local BrowseComp-Plus backends. Override, for example:
 #   SEARCH_URL=http://localhost:8003 bash run_agent.sh ...
@@ -66,6 +70,7 @@ echo "Browser Backend: $BROWSER_BACKEND"
 echo "Output Directory: $OUTPUT_DIR"
 echo "Archive after turns: ${ARCHIVE_TURNS:-4 (default)}"
 echo "Parallel tool calls: $PARALLEL_TOOL_CALLS"
+echo "Max concurrency per worker: $MAX_CONCURRENCY_PER_WORKER"
 echo "=========================================="
 echo ""
 
@@ -84,7 +89,7 @@ if [ "$DATASET_NAME" = "browsecomp_plus" ]; then
         --browser_backend "$BROWSER_BACKEND" \
         --reasoning_effort high \
         --vllm_server_url "$SERVER_URLS" \
-        --max_concurrency_per_worker 32 \
+        --max_concurrency_per_worker "$MAX_CONCURRENCY_PER_WORKER" \
         $( [ "$PARALLEL_TOOL_CALLS" = "off" ] && echo "--disable_parallel_tool_calls" ) \
         $( [ -n "$ARCHIVE_TURNS" ] && echo "--force_archive_after_turns $ARCHIVE_TURNS" )
 else
@@ -101,7 +106,7 @@ else
         --browser_backend "$BROWSER_BACKEND" \
         --reasoning_effort high \
         --vllm_server_url "$SERVER_URLS" \
-        --max_concurrency_per_worker 32 \
+        --max_concurrency_per_worker "$MAX_CONCURRENCY_PER_WORKER" \
         $( [ "$PARALLEL_TOOL_CALLS" = "off" ] && echo "--disable_parallel_tool_calls" ) \
         $( [ -n "$ARCHIVE_TURNS" ] && echo "--force_archive_after_turns $ARCHIVE_TURNS" )
 fi

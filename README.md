@@ -82,7 +82,10 @@ Configure API keys for Serper-backed benchmarks and evaluation:
 
 ```bash
 cp .env.template .env
+```
 
+Remember to config your API keys in `.env` file:
+```text
 # Get API Key: https://serper.dev/
 SERPER_API_KEY=your_serper_api_key_here
 
@@ -116,9 +119,9 @@ bash scripts/start_gptoss_servers.sh \
   8010 \
   "2,3,4,5,6,7" \
   "openai/gpt-oss-20b" \
-  "0.95,0.95,0.95" \
+  "0.9,0.9,0.9" \
   2 \
-  32
+  24
 ```
 This starts 3 two-GPU TP replicas on ports `8010` through `8012`.
 
@@ -146,6 +149,8 @@ For Qwen3.5/3.6-35B, GPT-OSS-120B, DeepSeek-V4-Flash, and NVIDIA Nemotron 3 depl
 
 ## Run
 
+The last `run_agent.sh` argument controls `max_concurrency_per_worker`. Recommended values are `8` for DeepSeek-V4-Flash (dsv4) and GPT-OSS-120B, `24` for GPT-OSS-20B, and `32` for other models.
+
 ### BrowseComp-Plus with AgentIR and GPT-OSS-20B
 
 Start AgentIR search on port `8003`, then run GPT-OSS-20B against BrowseComp-Plus:
@@ -162,7 +167,8 @@ SEARCH_URL="http://localhost:8003" bash run_agent.sh \
   "openai/gpt-oss-20b" \
   10000 \
   "" \
-  on
+  on \
+  24
 ```
 
 ### BrowseComp-ZH with Serper, Observation Masking and Qwen3.5-9B
@@ -179,7 +185,8 @@ bash run_agent.sh \
   "Qwen/Qwen3.5-9B" \
   4 \
   "" \
-  on
+  on \
+  32
 ```
 
 ## Evaluation

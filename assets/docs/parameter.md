@@ -78,7 +78,8 @@ bash run_agent.sh \
   [model_path] \
   [archive_turns] \
   [external_url] \
-  [parallel_tool_calls]
+  [parallel_tool_calls] \
+  [max_concurrency_per_worker]
 ```
 
 | Parameter | Default | Description |
@@ -92,26 +93,27 @@ bash run_agent.sh \
 | `archive_turns` | `4` | Observation masking window. Browser results older than this many assistant turns are archived; use a large value such as `10000` to effectively disable it |
 | `external_url` | empty | Optional comma-separated OpenAI-compatible endpoint list. When set, it bypasses local port construction |
 | `parallel_tool_calls` | `on` | Set to `off` to disable model-specific multi-tool-call prompting and concurrent `browser.search` execution |
+| `max_concurrency_per_worker` | `32` | Maximum concurrent agent tasks sent to each model worker. Recommended values: DeepSeek-V4-Flash (dsv4) and GPT-OSS-120B use `8`; GPT-OSS-20B uses `24`; other models use `32` |
 
 Set `SEARCH_URL` to use a local search service on a non-default port:
 
 ```bash
-SEARCH_URL=http://localhost:8003 bash run_agent.sh results/<exp> 8010 3 browsecomp_plus local <model_path>
+SEARCH_URL=http://localhost:8003 bash run_agent.sh results/<exp> 8010 3 browsecomp_plus local <model_path> 4 "" on 32
 ```
 
 If you want to set `parallel_tool_calls` while leaving `external_url` empty, pass `""` for the eighth argument:
 
 ```bash
-bash run_agent.sh results/<exp> 8010 3 browsecomp_plus local <model_path> 4 "" on
+bash run_agent.sh results/<exp> 8010 3 browsecomp_plus local <model_path> 4 "" on 32
 ```
 
 **Examples:**
 ```bash
-# BrowseComp-Plus with AgentIR search on port 8003
-SEARCH_URL=http://localhost:8003 bash run_agent.sh results/<exp> 8010 3 browsecomp_plus local <model_path> 4 "" on
+# BrowseComp-Plus with AgentIR search on port 8003 and GPT-OSS-20B
+SEARCH_URL=http://localhost:8003 bash run_agent.sh results/<exp> 8010 3 browsecomp_plus local openai/gpt-oss-20b 4 "" on 24
 
 # BrowseComp-ZH with Serper API
-bash run_agent.sh results/<exp> 8010 7 browsecomp-zh serper <model_path> 4 "" on
+bash run_agent.sh results/<exp> 8010 7 browsecomp-zh serper <model_path> 4 "" on 32
 ```
 
 ---
