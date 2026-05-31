@@ -1,0 +1,30 @@
+[project]
+name = "iDeepSearch"
+version = "0.1.0"
+description = "iDeepSearch: Best practice in open source deep search."
+readme = "README.md"
+requires-python = ">=3.12"
+dependencies = [
+    "colorama>=0.4.6",
+    "datasets>=4.5.0",
+    "duckdb>=1.4.4",
+    "faiss-cpu>=1.13.2",
+    "fastapi>=0.128.0",
+    "gpt-oss[all]>=0.0.9",
+    "httpx[http2]>=0.28.1",
+    "ipykernel>=7.1.0",
+    "loguru>=0.7.3",
+    "peft>=0.18.1",
+    "prettytable>=3.17.0",
+    "pyserini>=1.5.0",
+    "qwen-omni-utils>=0.0.8",
+    "transformers>=4.57.6",
+    "vllm==0.13.0",
+    "json5>=0.9.10",
+]
+
+[tool.setuptools]
+packages = ["utils"]
+
+[tool.setuptools.package-data]
+"*" = ["*.txt", "*.md"]

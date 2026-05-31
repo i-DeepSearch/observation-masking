@@ -1,0 +1,115 @@
+# Byte-compiled / optimized / DLL files
+__pycache__/
+*.py[cod]
+*$py.class
+hf/
+paper/
+.codex/
+.jdk/
+.agents/
+
+# C extensions
+*.so
+
+# Tevatron
+Tevatron/
+tevatron/
+
+# Distribution / packaging
+.Python
+build/
+develop-eggs/
+dist/
+downloads/
+eggs/
+.eggs/
+lib/
+lib64/
+parts/
+sdist/
+var/
+wheels/
+share/python-wheels/
+*.egg-info/
+.installed.cfg
+*.egg
+MANIFEST
+.jdk/
+
+# Installer logs
+pip-log.txt
+pip-delete-this-directory.txt
+
+# Unit test / coverage reports
+htmlcov/
+.tox/
+.nox/
+.coverage
+.coverage.*
+.cache
+nosetests.xml
+coverage.xml
+*.cover
+*.py,cover
+.hypothesis/
+.pytest_cache/
+cover/
+
+# Translations
+*.mo
+*.pot
+
+# Environments
+.env
+.venv
+qwen35/
+ds/
+env/
+venv/
+ENV/
+env.bak/
+venv.bak/
+glm_cu12/
+
+# IDE
+.idea/
+.vscode/
+*.swp
+
+# OS
+.DS_Store
+
+# Logs
+*.log
+logs/
+
+# Lock files
+*.lock
+
+# Data and model files
+*.pt
+*.ckpt
+*.pkl
+*.parquet
+data/
+dataset/
+models/
+checkpoints/
+
+# Project specific
+tevatron/
+Tevatron/
+results/
+outputs/
+wandb/
+ray-logs/
+
+# Temporary
+tmp/
+*.tmp.*
+wget-log
+
+# QID ordering files (keep in git, exclude experiment traces)
+!results/browsecomp-plus/qid_*.json
+!results/browsecomp-plus/qid_*.csv
+!results/browsecomp-plus/recommended_*.json

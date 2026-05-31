@@ -1,0 +1,42 @@
+#!/bin/bash
+
+# Keep runtime/download caches under the project by default.
+# Override CACHE_ROOT to place them elsewhere.
+SCRIPT_DIR="$( cd "$( dirname "${BASH_SOURCE[0]}" )" && pwd )"
+PROJECT_ROOT="$(dirname "$SCRIPT_DIR")"
+CACHE_ROOT=${CACHE_ROOT:-"$PROJECT_ROOT/.cache"}
+
+export XDG_CACHE_HOME=${XDG_CACHE_HOME:-"$CACHE_ROOT/xdg"}
+export UV_CACHE_DIR=${UV_CACHE_DIR:-"$CACHE_ROOT/uv"}
+
+export HF_HOME=${HF_HOME:-"$CACHE_ROOT/huggingface"}
+export HUGGINGFACE_HUB_CACHE=${HUGGINGFACE_HUB_CACHE:-"$HF_HOME/hub"}
+export HF_HUB_CACHE=${HF_HUB_CACHE:-"$HUGGINGFACE_HUB_CACHE"}
+export HF_ASSETS_CACHE=${HF_ASSETS_CACHE:-"$HF_HOME/assets"}
+export HF_XET_CACHE=${HF_XET_CACHE:-"$HF_HOME/xet"}
+export TRANSFORMERS_CACHE=${TRANSFORMERS_CACHE:-"$HF_HOME/transformers"}
+
+export TORCH_HOME=${TORCH_HOME:-"$CACHE_ROOT/torch"}
+export TRITON_CACHE_DIR=${TRITON_CACHE_DIR:-"$CACHE_ROOT/triton"}
+export TORCHINDUCTOR_CACHE_DIR=${TORCHINDUCTOR_CACHE_DIR:-"$CACHE_ROOT/torchinductor"}
+export CUDA_CACHE_PATH=${CUDA_CACHE_PATH:-"$CACHE_ROOT/nv-cuda"}
+export VLLM_RUNTIME_CACHE_ROOT=${VLLM_RUNTIME_CACHE_ROOT:-"$CACHE_ROOT/vllm-runtime"}
+export VLLM_CACHE_ROOT=${VLLM_CACHE_ROOT:-"$VLLM_RUNTIME_CACHE_ROOT/vllm"}
+export FLASHINFER_WORKSPACE_BASE=${FLASHINFER_WORKSPACE_BASE:-"$CACHE_ROOT/flashinfer"}
+export PLAYWRIGHT_BROWSERS_PATH=${PLAYWRIGHT_BROWSERS_PATH:-"$CACHE_ROOT/ms-playwright"}
+
+mkdir -p \
+    "$XDG_CACHE_HOME" \
+    "$UV_CACHE_DIR" \
+    "$HF_HOME" \
+    "$HUGGINGFACE_HUB_CACHE" \
+    "$HF_ASSETS_CACHE" \
+    "$HF_XET_CACHE" \
+    "$TRANSFORMERS_CACHE" \
+    "$TORCH_HOME" \
+    "$TRITON_CACHE_DIR" \
+    "$TORCHINDUCTOR_CACHE_DIR" \
+    "$CUDA_CACHE_PATH" \
+    "$VLLM_CACHE_ROOT" \
+    "$FLASHINFER_WORKSPACE_BASE/.cache/flashinfer" \
+    "$PLAYWRIGHT_BROWSERS_PATH"
