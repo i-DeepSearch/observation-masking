@@ -227,15 +227,15 @@ Observation masking (CM) helps most when the useful signal is sparse and the inp
 </details>
 
 <details>
-<summary><strong>Decaying Attention to Stale Observation</strong></summary>
+<summary><strong>Reasoning Attention over Tool Results</strong></summary>
 
 <br>
 
 <div align="center">
-  <img src="assets/fig/attn_map2.png" alt="Attention over Reasoning and Observation Tokens" width="88%">
+  <img src="assets/fig/attn_map2.png" alt="Reasoning Attention over Tool Results" width="88%">
 </div>
 
-Masking stale observations is relatively safe because models do not attend to them extensively. The left panel separates attention in a single trajectory into reasoning tokens and observation tokens. The middle panel aggregates attention-weight distributions by relative position across input contexts of different lengths. The cumulative attention-share bars summarize the mean share at each step across the three models.
+Observation masking improves context management when it preserves the tool results that the model still uses for reasoning. The analysis measures reasoning-token attention over tool-result tokens: cases with stronger CM gains maintain higher reasoning attention on useful tool results, while weaker settings show lower or more diffuse attention. The three model-retriever settings are Qwen3.5-4B + BM25, Qwen3.5-9B + AgentIR, and Qwen3.6-35B-A3B + AgentIR.
 
 </details>
 
