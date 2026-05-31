@@ -35,7 +35,7 @@ CM adds little when the retriever is the bottleneck, because the context contain
 
 ## Features
 
-- **Model Compatibility**: seamless support for [Qwen3.5](https://huggingface.co/Qwen/Qwen3.5-9B) / [Qwen3.6](https://huggingface.co/Qwen/Qwen3.6-35B-A3B) Family, [DeepSeek-V4-Flash](https://huggingface.co/deepseek-ai/DeepSeek-V4-Flash), [NVIDIA Nemotron 3](https://huggingface.co/nvidia/NVIDIA-Nemotron-3-Nano-30B-A3B-BF16), and [GPT-OSS](https://huggingface.co/openai/gpt-oss-120b).
+- **Model Compatibility**: seamless support for <img src="assets/logos/tongyi.png" alt="Qwen" height="18" align="absmiddle"> [Qwen3.5](https://huggingface.co/Qwen/Qwen3.5-9B) / <img src="assets/logos/tongyi.png" alt="Qwen" height="18" align="absmiddle"> [Qwen3.6](https://huggingface.co/Qwen/Qwen3.6-35B-A3B) Family, <img src="assets/logos/deepseek.png" alt="DeepSeek" height="18" align="absmiddle"> [DeepSeek-V4-Flash](https://huggingface.co/deepseek-ai/DeepSeek-V4-Flash), <img src="assets/logos/nvidia.png" alt="NVIDIA" height="18" align="absmiddle"> [NVIDIA Nemotron 3](https://huggingface.co/nvidia/NVIDIA-Nemotron-3-Nano-30B-A3B-BF16), and <img src="assets/logos/gpt.png" alt="GPT-OSS" height="18" align="absmiddle"> [GPT-OSS](https://huggingface.co/openai/gpt-oss-120b).
 - **Parallel Tool Calls**: optional parallel browser/search execution for models that benefit from multi-tool-call planning according to their native tool-calling template ([Qwen3](https://huggingface.co/Qwen/Qwen3.5-35B-A3B/blob/main/chat_template.jinja), [DeepSeek-V4-Flash](https://huggingface.co/deepseek-ai/DeepSeek-V4-Flash/tree/main/encoding), [NVIDIA Nemotron 3](https://huggingface.co/nvidia/NVIDIA-Nemotron-3-Nano-30B-A3B-BF16/blob/main/chat_template.jinja), and [GPT-OSS](https://huggingface.co/openai/gpt-oss-120b/blob/main/chat_template.jinja)).
 - **Configurable Masking Window**: freely choose the window size for retaining or archiving stale observations.
 - **Flexible Search Backend**: use local BM25, Qwen3-Embedding-8B, or AgentIR retrieval for BrowseComp-Plus, and Serper-backed web search for live-web benchmarks.
@@ -43,7 +43,7 @@ CM adds little when the retriever is the bottleneck, because the context contain
 
 ## 🛠 Recommended Environment
 + More/Better than 8 * A100 80G Nvidia GPUs on one node
-+ Linux 
++ Linux Ubuntu 22.04.4
 + CUDA 12.2 or higher (if you need to run Qwen3.5/3.6 and DeepSeek-V4, you will need CUDA 13.1 or higher)
 
 ### One-click setup
