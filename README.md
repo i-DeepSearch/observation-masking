@@ -142,7 +142,7 @@ bash scripts/start_qwen_servers.sh \
 
 This starts 7 single-GPU replicas on ports `8010` through `8016`.
 
-For Qwen3.5/3.6-35B, GPT-OSS-120B, DeepSeek-V4-Flash, and NVIDIA Nemotron 3 deployment recipes, see [`assets/docs/deployment.md`](assets/docs/deployment.md).
+For Qwen3.5/3.6-35B, GPT-OSS-120B, DeepSeek-V4-Flash, and NVIDIA Nemotron 3 deployment recipes, see <img src="assets/logos/log.svg" alt="Deployment guide" height="18" align="absmiddle"> [`assets/docs/deployment.md`](assets/docs/deployment.md).
 
 ## Run
 
@@ -321,8 +321,8 @@ We are grateful for all the help we got from our contributors.
 </p>
 
 We also thank the following open-source projects:
-- [vLLM ](https://github.com/vllm-project/vllm) for fast LLM inference support.
-- [OpenResearcher](https://github.com/TIGER-AI-Lab/OpenResearcher) for early-stage exploration in scaffold-building and deep search benchmark collection.
+- <img src="assets/logos/vllm-color.png" alt="vLLM" height="18" align="absmiddle"> [vLLM](https://github.com/vllm-project/vllm) for fast LLM inference support.
+- <img src="assets/logos/or-logo1.png" alt="OpenResearcher" height="18" align="absmiddle"> [OpenResearcher](https://github.com/TIGER-AI-Lab/OpenResearcher) for early-stage exploration in scaffold-building and deep search benchmark collection.
 - [DeepSeek-AI](https://huggingface.co/deepseek-ai), [Qwen-AI](https://huggingface.co/Qwen), and [OpenAI GPT-OSS Team](https://huggingface.co/openai) for their marvelous open-weight models.
 
 
