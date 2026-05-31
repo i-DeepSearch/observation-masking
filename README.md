@@ -190,7 +190,7 @@ python eval.py --input_dir results/browsecomp-plus/gptoss-20b-agentir --model_na
 python eval.py --input_dir results/browsecomp-zh/qwen3.5-9b-serper --model_name_or_path Qwen/Qwen3.5-9B
 ```
 
-For full script arguments, see [`assets/docs/parameter.md`](assets/docs/parameter.md).
+For full script arguments, see <img src="assets/logos/log.svg" alt="Parameter guide" height="18" align="absmiddle"> [`assets/docs/parameter.md`](assets/docs/parameter.md).
 
 ## Scaffold
 
@@ -209,7 +209,7 @@ We decouples browser execution from model serving: a shared browser pool handles
 | [GAIA-text](https://arxiv.org/abs/2311.12983) | `gaia` | 103 | EN | serper |
 | [xbench-DeepSearch](https://huggingface.co/datasets/xbench/DeepSearch) | `xbench` | 100 | ZH | serper |
 
-For benchmark notes, see [`assets/docs/benchmarks.md`](assets/docs/benchmarks.md).
+For benchmark notes, see <img src="assets/logos/log.svg" alt="Benchmark notes" height="18" align="absmiddle"> [`assets/docs/benchmarks.md`](assets/docs/benchmarks.md).
 
 ## Analysis & Findings
 
@@ -227,7 +227,7 @@ Observation masking (CM) helps most when the useful signal is sparse and the inp
 </details>
 
 <details>
-<summary><strong>Attention to Stale Observations</strong></summary>
+<summary><strong>Decaying Attention to Stale Observation</strong></summary>
 
 <br>
 
@@ -240,7 +240,7 @@ Masking stale observations is relatively safe because models do not attend to th
 </details>
 
 <details>
-<summary><strong>Page Reopening Behavior</strong></summary>
+<summary><strong>Page Reopening -- Lost in the Middle</strong></summary>
 
 <br>
 
