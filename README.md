@@ -275,7 +275,7 @@ We are grateful for all the help we got from our contributors.
             </td>
             <td align="center">
                 <a href="https://zhuofeng-li.github.io/">
-                    <img src="https://zhuofeng-li.github.io/assets/img/prof_pic-800.webp" width="100" height="100" style="object-fit: cover; object-position: center center;" alt="Zhuofeng Li"/>
+                    <img src="https://github.com/Zhuofeng-Li.png" width="100" height="100" style="object-fit: cover; object-position: center center;" alt="Zhuofeng Li"/>
                     <br />
                     <sub><b>Zhuofeng Li</b></sub>
                 </a>
@@ -291,7 +291,7 @@ We are grateful for all the help we got from our contributors.
         <tr>
             <td align="center">
                 <a href="https://pat-jj.github.io/">
-                    <img src="https://pat-jj.github.io/assets/img/prof_pic_anime.png" width="100" height="100" style="object-fit: contain;" alt="Patrick Jiang"/>
+                    <img src="assets/logos/patrick.png" width="100" height="100" style="object-fit: contain;" alt="Patrick Jiang"/>
                     <br />
                     <sub><b>Patrick Jiang</b></sub>
                 </a>
