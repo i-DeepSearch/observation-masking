@@ -5,7 +5,7 @@
 </p>
 
 <div align="center">
-  <a href="x.com"><img src="https://img.shields.io/badge/X-POST-000000?style=for-the-badge&logo=X&logoColor=white&labelColor=555555" alt="X Post"></a>
+  <a href="https://x.com/ghxisaac/status/2062169810268811748?s=46"><img src="https://img.shields.io/badge/X-POST-000000?style=for-the-badge&logo=X&logoColor=white&labelColor=555555" alt="X Post"></a>
   <a href="https://github.com/i-DeepSearch/observation-masking"><img src="https://img.shields.io/badge/GitHub-CODE-181717?style=for-the-badge&logo=github&logoColor=white&labelColor=555555" alt="GitHub Code"></a>
   <a href="https://arxiv.org/abs/2606.00408"><img src="https://img.shields.io/badge/arXiv-PAPER-B31B1B?style=for-the-badge&logo=arxiv&logoColor=white&labelColor=555555" alt="arXiv Paper"></a>
   <a href="https://huggingface.co/datasets/i-DeepSearch/observation-masking-eval-logs"><img src="https://img.shields.io/badge/HuggingFace-EVAL%20LOGS-FF9500?style=for-the-badge&logo=huggingface&logoColor=white&labelColor=555555" alt="HuggingFace Eval Logs"></a>
