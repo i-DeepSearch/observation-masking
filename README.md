@@ -11,6 +11,11 @@
   <a href="https://huggingface.co/datasets/i-DeepSearch/observation-masking-eval-logs"><img src="https://img.shields.io/badge/HuggingFace-EVAL%20LOGS-FF9500?style=for-the-badge&logo=huggingface&logoColor=white&labelColor=555555" alt="HuggingFace Eval Logs"></a>
 </div>
 
+## 📰 News
+
+- **[2026.09.22]** 🏆 Our paper and results are now live on [Papers with Code](https://paperswithcode.co/paper/2606.00408)! Marked as SOTA performance with DS-V4-Flash-Max and ranks 3rd overall on both the [BrowseComp-Plus](https://paperswithcode.co/benchmark/browsecomp-plus?task=agents&eval=23476) (with AgentIR-4B) and [BrowseComp-ZH](https://paperswithcode.co/benchmark/browsecomp-zh?task=deep-research-agents&eval=23477) (with Serper API) leaderboards. 
+- **[2026.08.30]** 🎉 Our paper has been accepted to **EMNLP 2026**!
+
 ## Regime Overview
 
 <div align="center">
