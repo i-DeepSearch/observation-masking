@@ -13,8 +13,8 @@
 
 ## 📰 News
 
-- **[2026.09.22]** 🏆 Our paper and results are now live on [Papers with Code](https://paperswithcode.co/paper/2606.00408)! Marked as SOTA performance with DS-V4-Flash-Max and ranks 3rd overall on both the [BrowseComp-Plus](https://paperswithcode.co/benchmark/browsecomp-plus?task=agents&eval=23476) (with AgentIR-4B) and [BrowseComp-ZH](https://paperswithcode.co/benchmark/browsecomp-zh?task=deep-research-agents&eval=23477) (with Serper API) leaderboards. 
-- **[2026.08.30]** 🎉 Our paper has been accepted to **EMNLP 2026**!
+- **[2026.09.22]** 🏆 Our paper and results are now live on [Papers with Code](https://paperswithcode.co/paper/2606.00408)! Marked as SOTA performance with <img src="assets/logos/deepseek.png" alt="DeepSeek" height="18" align="absmiddle"> [DeepSeek-V4-Flash](https://huggingface.co/deepseek-ai/DeepSeek-V4-Flash) and ranks 3rd overall on both the [BrowseComp-Plus](https://paperswithcode.co/benchmark/browsecomp-plus?task=agents&eval=23476) (with AgentIR-4B) and [BrowseComp-ZH](https://paperswithcode.co/benchmark/browsecomp-zh?task=deep-research-agents&eval=23477) (with Serper API) leaderboards. 
+- **[2026.08.30]** 🎉 Our paper has been accepted to [**EMNLP 2026**](https://2026.emnlp.org/)!
 
 ## Regime Overview
 
